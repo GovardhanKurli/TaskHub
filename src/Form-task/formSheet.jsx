@@ -21,7 +21,7 @@ const TaskForm = () => {
     Axios.post("http://localhost:5000/posts", task)
       .then((res) => {
         console.log("Task Submitted:", res.data);
-        alert("Task Submitted Successfully");
+        alert("Task Assumed Successfully");
         getdata();
         setTask({
           name: "",

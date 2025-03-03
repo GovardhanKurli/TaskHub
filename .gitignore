@@ -10,7 +10,12 @@
 
 # production
 /build
+# Ignore package-lock.json
+package-lock.json
 
+# Ignore operating system files
+.DS_Store
+Thumbs.db
 # misc
 .DS_Store
 .env.local

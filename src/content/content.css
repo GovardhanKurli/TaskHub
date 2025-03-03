@@ -30,6 +30,7 @@
     height: 30px;
     border-radius: 5px;
     background-color: #161F2C;
+    color: white;
 
 }
 .sub-content{
@@ -50,3 +51,26 @@
     font-size: 16px;
     margin-top: 10px;
 }
+
+
+.task-btn {
+    background: linear-gradient(135deg, #4F46E5, #3B82F6);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+
+  .task-btn:hover {
+    background: linear-gradient(135deg, #4338CA, #2563EB);
+    transform: scale(1.05);
+  }
+
+  .task-btn:active {
+    transform: scale(0.98);}

@@ -1,7 +1,13 @@
 import React from "react";
 import "./content.css";
+import { useNavigate } from "react-router-dom";
+
 
 const Content = () => {
+  const Navigate = useNavigate();
+  const handleClick = () => {
+    Navigate("/TaskForm");
+  };
   return (
     <>
     
@@ -56,13 +62,14 @@ Con</a></li>
 
       {/* ?contener2 */}
       <div className="content-2">
-        {/* <button>dlkgfh</button> */}
+      
         <img
           src="https://www.skilllearningacademy.com/static/media/HomeBanner.5f25adb32ab82243fcb5.png"
           alt="img"
           className="tree-img"
           style={{}}
         />
+        <button class="task-btn" onClick={handleClick}>Tasks</button>
       </div>
     </div>
     </>
