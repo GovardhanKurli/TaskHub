@@ -98,32 +98,37 @@ const TaskForm = () => {
         </button>
       </form>
 
-      <div className="list of data">
-      <h2 className="text-xl font-bold mb-4"> Assigned Task List</h2>
+      <div className="list-of-data">
+    <h2 className="text-xl font-bold mb-4">Assigned Task List</h2>
 
-        {response &&
-          response.map((item) => (
-            <div key={item.id} className="p-2 border rounded my-2">
-              
-              <table>
+    {response && response.length > 0 ? (
+        <table>
+            <thead>
                 <tr>
-                  <th> Name</th>
-                  <th>Task Description</th>
-                  <th>Due Date</th>
-                  <th>Submition Date</th>
-                  <th>Status</th>
+                    <th>Name</th>
+                    <th>Task Description</th>
+                    <th>Due Date</th>
+                    <th>Submission Date</th>
+                    <th>Status</th>
                 </tr>
-                <tr key={item.id}>
-                  <td>{item ? item.name : "no data get"}</td>
-                  <td>{item.description}</td>
-                  <td>{item.dueDate}</td>
-                  <td>{item.SubmitioDate}</td>
-                </tr>
-              </table>
-            </div>
-          ))}
-        {/* {response && response.map(()=>{})} */}
-      </div>
+            </thead>
+            <tbody>
+                {response.map((item) => (
+                    <tr key={item.id}>
+                        <td>{item.name || "No data available"}</td>
+                        <td>{item.description}</td>
+                        <td>{item.dueDate}</td>
+                        <td>{item.SubmitioDate || "Not submitted"}</td>
+                        <td>{item.status || "Pending"}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    ) : (
+        <p className="text-center text-gray-600">No tasks assigned yet.</p>
+    )}
+</div>
+
     </div>
   );
 };
