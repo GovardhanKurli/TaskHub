@@ -1,45 +1,12 @@
-/* Container */
-.task-container {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-family: Arial, sans-serif;
-}
 
-/* Title */
-.task-title {
-  text-align: center;
-  color: #2c3e50;
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-/* Form Styling */
-.task-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
 
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .form-group textarea {
@@ -49,7 +16,7 @@
 
 /* Submit Button */
 .submit-button {
-  background: #3498db;
+  background: rgb(127, 1, 234);;
   color: white;
   font-size: 16px;
   padding: 10px;
@@ -59,41 +26,35 @@
   transition: 0.3s;
 }
 
-.submit-button:hover {
-  background: #2980b9;
-}
 
-/* Table Styling */
-.table-container {
-  margin-top: 20px;
-  overflow-x: auto;
-}
+/* esrdtfyuiop';lkjhgfdghjkl;kjhgbv */
+.Main-container{
+  display: flex;
+/* column-gap: 30px; */
+gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
 
-.task-table {
+  
+}
+.form-container {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.task-table th, .task-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-.task-table th {
-  background: #3498db;
+  max-width: 50vh;
+  padding: 20px;
+  background: #302f2f;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
   color: white;
 }
 
-.task-table tr:nth-child(even) {
-  background: #f8f8f8;
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+  /* color: #333; */
 }
 
-/* No Tasks Message */
-.no-tasks {
-  text-align: center;
-  color: #888;
-  font-size: 16px;
-  margin-top: 10px;
+.form-group {
+  margin-bottom: 15px;
 }
