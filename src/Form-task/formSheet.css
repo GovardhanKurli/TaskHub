@@ -106,21 +106,19 @@ td {
   color: #333;
 }
 
-/* Alternating Row Colors */
 tr:nth-child(even) {
   background: #f2f2f2;
 }
 
-/* Hover Effect */
 tr:hover {
   background: #e9ecef;
 }
 
-/* Responsive Table */
 @media (max-width: 768px) {
   table {
       display: block;
       overflow-x: auto;
       white-space: nowrap;
   }
+
 }

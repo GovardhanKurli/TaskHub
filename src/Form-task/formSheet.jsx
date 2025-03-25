@@ -38,6 +38,7 @@ const TaskForm = () => {
       
   };
 
+  
   const getdata = () => {
     Axios.get("http://localhost:5000/posts")
       .then((response) => {
@@ -69,6 +70,7 @@ const TaskForm = () => {
             required
           />
         </div>
+
         <div className="form-group">
           <label className="block font-medium">Task Description: </label> <br />
           <textarea
@@ -100,11 +102,13 @@ const TaskForm = () => {
 
       <div className="list-of-data">
     <h2 className="text-xl font-bold mb-4">Assigned Task List</h2>
+     
 
     {response && response.length > 0 ? (
         <table>
             <thead>
                 <tr>
+                
                     <th>Name</th>
                     <th>Task Description</th>
                     <th>Due Date</th>
@@ -132,5 +136,4 @@ const TaskForm = () => {
     </div>
   );
 };
-
 export default TaskForm;
