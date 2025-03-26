@@ -9,7 +9,7 @@ const TaskForm = () => {
     SubmitioDate: new Date().toLocaleDateString(),
   });
   const [response, setResponse] = useState();
-
+// console.log(`response`, response);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setTask({ ...task, [name]: value });
@@ -40,9 +40,9 @@ const TaskForm = () => {
 
   
   const getdata = () => {
-    Axios.get("http://localhost:5000/posts")
+    Axios.get("http://localhost:3000/posts")
       .then((response) => {
-        console.log("this" + response.data);
+        console.log("this response.data" + response.data);
         setResponse(response.data);
       })
       .catch((error) => {
@@ -118,6 +118,9 @@ const TaskForm = () => {
             </thead>
             <tbody>
                 {response.map((item) => (
+                  console.log(`item.name`,item.name),
+                    console.log(`item.description`, item.dueDate),
+                  
                     <tr key={item.id}>
                         <td>{item.name || "No data available"}</td>
                         <td>{item.description}</td>
