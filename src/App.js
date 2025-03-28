@@ -7,12 +7,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-
-         {/* <Content/> */}
  <Router>
  <Navbar/>
-  {/* <TaskForm/> */}
-
    <Routes>
      <Route exact path="/TaskForm" element={<TaskForm />} />
      <Route exact path="/" element={<Content />} />
