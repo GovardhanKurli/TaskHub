@@ -10,6 +10,7 @@ const TaskForm = () => {
   });
   const [response, setResponse] = useState();
 // console.log(`response`, response);
+// console.log(`response`, response);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setTask({ ...task, [name]: value });
@@ -134,6 +135,36 @@ const TaskForm = () => {
     ) : (
         <p className="text-center text-gray-600">No tasks assigned yet.</p>
     )}
+    {/* {response && response.length > 0 ? (
+        <table>
+            <thead>
+                <tr>
+                
+                    <th>Name</th>
+                    <th>Task Description</th>
+                    <th>Due Date</th>
+                    <th>Submission Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {response.map((item) => (
+                  console.log(`item.name`,item.name),
+                    console.log(`item.description`, item.dueDate),
+                  
+                    <tr key={item.id}>
+                        <td>{item.name || "No data available"}</td>
+                        <td>{item.description}</td>
+                        <td>{item.dueDate}</td>
+                        <td>{item.SubmitioDate || "Not submitted"}</td>
+                        <td>{item.status || "Pending"}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    ) : (
+        <p className="text-center text-gray-600">No tasks assigned yet.</p>
+    )} */}
 </div>
 
     </div>
